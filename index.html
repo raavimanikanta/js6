@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Function </h1>
+    <p>Function is a block of code which is designed to perform particular task function is executed when "something" invokes it (calls it).Function is written with code and that function can be used multiple times.</p>
+    <h1>Function declaration</h1>
+    <p>In Function declaration function is written with the help of function keyword and it also has the function name and we also use  the parametrs</p>
+    <h3>Example:<pre>
+                function add (a,b){
+                    return a+b;
+                }
+                console.log(add(5,5))
+        Output:10.
+    </pre></h3>
+    <h1>Function Expression </h1>
+    <p>Function expression is similar to the function declaration but we dont give function name.Function expression are not hoisted since during hoisting it treats it as a function variable. </p>
+    <h3>Example:
+        <pre>
+            const Fun1=function (){
+                console.log("This is function expression ")
+            }
+            Fun1();
+        Output:This is function expression 
+        </pre>
+    </h3> 
+    <h1>Constructor-Function</h1>  
+    <p>Constructor Functions are used in javascript to create the objects.Objects are created using the new keyword </p> 
+    <h3>Exmaple:
+        <pre>
+           function Person (name1,age,location){
+            this.name1=name1;
+            this.age=age;
+            this.location=location;
+          }
+           var PersonObject=new Person ("john",23,"Mumbai")
+           console.log(PersonObject)
+        </pre>
+    </h3>  
+    <h1>Immediately invoked function expression</h1>  
+    <p>Immediately invoked function expressions are the functions which are executed as soon they are created </p>
+    <h3>Example:
+        <pre>
+        (function (){
+            console.log("This function invokes as soon as they are created ")
+        }())
+        </pre></h3>
+        <h1>First Class Functions</h1>
+        <p>First class functions are the functions which are treated as values and assigned to the variables and they are also passed as the arguments to the another functions and can be returned from other functions</p> 
+        <h3>Example:
+            <pre>
+                function add (a,b){
+                    return a+b;
+                  }
+                  
+                  const Fun2 = function(a){
+                      return a(5,5)
+                  }
+                console.log(Fun2(add))
+
+           </pre></h3>
+           <h1>Callback Functions</h1>
+           <p>Callback functions are the functions which are passed as arguments to the other functions.Whenever we want to execute the piece of code soon after the execution of some other code then the callbacks are used.  </p>
+           <h3>Exmaple:<pre>
+            function SubmitHomework (){
+                console.log("Now I have to Submit home work ");
+             }
+             
+             function CopyHomeWork (Callback){
+                 console.log("I have to copy home work from my friend ");
+                 Callback();
+              }
+             CopyHomeWork(SubmitHomework)
+             Output:
+             1.I have to copy home work from my friend . 
+             2.Now I have to Submit home work
+           </pre></h3>
+           <h1>Higher order Functions </h1>
+           <p>Higher order functions are the functions which accepts another function as an argument </p>
+           <h3>Example:<pre>
+         
+            function multiple(a,b){
+               console.log(a*b)
+            }
+            function Result(multiple){
+                multiple(5,5)
+            }
+            (Result(multiple))
+           </pre></h3>
+        
+               <script src="./script.js"></script>
+</body>
+</html>
